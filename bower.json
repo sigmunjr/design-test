@@ -18,16 +18,16 @@
         "jquery": "~2.1.4"
     },
     "main": [
-        "./felles-design/dist/js/bootstrap.min.js",
-        "./felles-design/dist/css/bootstrap.css",
-        "./felles-design/dist/css/felles-design.css",
-        "./felles-design/dist/fonts/glyphicons-halflings-regular.eot",
-        "./felles-design/dist/fonts/glyphicons-halflings-regular.svg",
-        "./felles-design/dist/fonts/glyphicons-halflings-regular.ttf",
-        "./felles-design/dist/fonts/glyphicons-halflings-regular.woff",
-        "./felles-design/dist/fonts/glyphicons-halflings-regular.woff2",
-        "./felles-design/dist/images/emblem.png",
-        "./felles-design/dist/images/ldir.png",
-        "./felles-design/dist/images/lines.png"
+        "./dist/js/bootstrap.min.js",
+        "./dist/css/bootstrap.css",
+        "./dist/css/felles-design.css",
+        "./dist/fonts/glyphicons-halflings-regular.eot",
+        "./dist/fonts/glyphicons-halflings-regular.svg",
+        "./dist/fonts/glyphicons-halflings-regular.ttf",
+        "./dist/fonts/glyphicons-halflings-regular.woff",
+        "./dist/fonts/glyphicons-halflings-regular.woff2",
+        "./dist/images/emblem.png",
+        "./dist/images/ldir.png",
+        "./dist/images/lines.png"
     ]
 }
