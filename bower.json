@@ -1,0 +1,33 @@
+{
+    "name": "felles-design",
+    "version": "0.0.1",
+    "authors": [
+        "Eirik Daleng Haukedal <edh@steria.no> - Sigmund Rolfsjord <sigmund.rolfsjord@ciber.no"
+    ],
+    "description": "Felles design profil for Landbruksdirektoratet",
+    "license": "",
+    "ignore": [
+        "**/.*",
+        "target",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~2.1.4"
+    },
+    "main": [
+        "./felles-design/dist/js/bootstrap.min.js",
+        "./felles-design/dist/css/bootstrap.css",
+        "./felles-design/dist/css/felles-design.css",
+        "./felles-design/dist/fonts/glyphicons-halflings-regular.eot",
+        "./felles-design/dist/fonts/glyphicons-halflings-regular.svg",
+        "./felles-design/dist/fonts/glyphicons-halflings-regular.ttf",
+        "./felles-design/dist/fonts/glyphicons-halflings-regular.woff",
+        "./felles-design/dist/fonts/glyphicons-halflings-regular.woff2",
+        "./felles-design/dist/images/emblem.png",
+        "./felles-design/dist/images/ldir.png",
+        "./felles-design/dist/images/lines.png"
+    ]
+}
