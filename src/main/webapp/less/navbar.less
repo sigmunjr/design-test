@@ -1,0 +1,167 @@
+@import "variables";
+
+div.nav#top,
+nav#top {
+  border-bottom: 3px solid @ldir-brown;
+  background: @ldir-navbar-top-background-color;
+  color: #000;
+  > .container {
+    position: relative;
+    height: 80px;
+    .landbruksdirektoratet {
+      position: absolute;
+      top: 10px;
+      content: "";
+      display: block;
+      width: 250px;
+      height: 60px;
+      background-image: url("../images/logo.med.tekst.svg");
+      background-repeat: no-repeat;
+
+    }
+  }
+}
+
+.nav-info {
+  float: right;
+  display: flex;
+  flex-direction: column;
+
+  .breadcrumb {
+    margin-right: 0;
+    font-weight: 300;
+  }
+
+  .login-info {
+    text-align: right;
+  }
+
+  .fagsystem-title {
+    font-size: 18px;
+    color: @ldir-text-regular-font-color;
+    text-align: right;
+  }
+}
+
+div.header > div.nav .navbar-text,
+header > nav .navbar-text {
+  margin-bottom: 3px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.navbar-default .navbar-text > a {
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  div.header > div.nav,
+  header > nav {
+    .navbar-text {
+      margin-left: 13px;
+    }
+  }
+
+  div.header > div.nav#middle,
+  header > nav#middle {
+    display: none !important;
+    .navbar-text:first-of-type {
+      font-size: 16.5px;
+    }
+    //border-bottom: 1px solid @ldir-container-bg-color;
+  }
+
+  div.header > div.nav#lower,
+  header > nav#lower {
+    background-color: @ldir-navbar-top-default-color;
+    border: none;
+    ul.nav.navbar-nav > li > a {
+      //padding-top: 8px;
+      //padding-bottom: 23px;
+    }
+
+    .container {
+      background-color: @ldir-navbar-top-default-color;
+
+    }
+
+    p.navbar-text.pull-right {
+      margin-top: 8px;
+    }
+  }
+
+  div.hecder > div.nav .navbar-right,
+  header > nav .navbar-right {
+    float: right !important;
+    margin-right: 10px;
+  }
+
+  .navbar-right ~ .navbar-right {
+    margin-right: 0;
+  }
+}
+
+.navbar-default {
+  background-color: @ldir-navbar-top-default-color;
+}
+
+.breadcrumb {
+  background-color: @ldir-navbar-top-background-color;
+}
+
+.navbar-default .navbar-nav {
+  > li > a, > li > a:hover {
+    color: #fff;
+  }
+
+  > .active > a {
+    color: @ldir-light-blue;
+    background-color: @ldir-navbar-top-default-color;
+    &:hover {
+      color: @ldir-light-blue;
+      background-color: @ldir-navbar-top-default-color;
+    }
+    //background-color: #e7e7e7;
+  }
+}
+
+div.header > div.nav.navbar-default > .container,
+header > nav.navbar-default > .container {
+  //padding-top: 4px;
+  //padding-bottom: 4px;
+  background-color: @ldir-navbar-top-background-color;
+}
+
+div.nav#lower ul.navbar-nav,
+nav#lower ul.navbar-nav {
+  position: relative;
+
+  li {
+    font-weight: normal;
+  }
+
+  @media screen and (min-width: 768px) {
+    > li.active::after,
+    > li:hover::after {
+      display: inline-block;
+      position: absolute;
+      width: 80%;
+      height: 4px;
+      background-color: @ldir-blue;
+      content: "";
+      left: 10%;
+      top: -3px;
+    }
+  }
+}
+
+/* Panel tabs */
+// Navs =======================================================================
+.nav.nav-tabs {
+  padding: 8px 8px 0 8px;
+  & > li {
+    margin-bottom: -2px;
+    text-transform: uppercase;
+    //box-shadow: 0 -4px 2px -2px #000000;
+  }
+}

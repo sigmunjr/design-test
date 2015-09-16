@@ -1,0 +1,34 @@
+@import "variables";
+
+table {
+  font-family: @ldir-text-regular-font-family;
+  font-size: @ldir-text-regular-font-size;
+}
+
+.table.table-striped > thead > tr  {
+  background-color: @ldir-table-striped-bg-color;
+  color: @ldir-table-striped-color;
+}
+
+.table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.table.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: @ldir-table-striped-even-bg-color;
+}
+
+.table > tfoot > tr > td {
+  border: 0;
+}
+
+.table > tbody {
+  background-color: @ldir-default-bg-color;
+  &> tr > td {
+    border-top: none;
+  }
+}
+
+.table > thead > tr > th {
+  border-bottom: 1px solid #dddddd;
+}

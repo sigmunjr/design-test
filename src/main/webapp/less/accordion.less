@@ -1,0 +1,83 @@
+@import "variables";
+
+.panel-group > .panel.panel-default {
+  .panel-body {
+    //box-shadow: 0 1px 0 @ldir-accordion-border-color;
+    //border-left: 1px solid @ldir-accordion-border-color;
+    //border-right: 1px solid @ldir-accordion-border-color;
+    //border-bottom: 1px solid @ldir-accordion-border-color;
+    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+    background-color: #f5f5f5;
+    border: none;
+  }
+  .panel-heading {
+    //box-shadow: 0 1px 0 @ldir-accordion-border-color;
+    //border: 1px solid @ldir-accordion-border-color;
+    margin-bottom: 0; // For input.btn
+    font-weight: @btn-font-weight;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+    .user-select(none);
+
+    text-transform: uppercase;
+    background-color: @ldir-panel-heading-bg-color;
+    padding: 0;
+    .box-shadow(1px 1px 4px rgba(0,0,0,.4));
+    .transition(all 0.4s);
+
+    > .panel-title {
+      font-family: @ldir-panel-heading-font-family;
+      font-weight: bold;
+      font-size: @ldir-text-regular-font-size;
+
+      > span {
+        margin-right: 10px;
+        line-height: 40px;
+      }
+    }
+
+    a {
+      display: flex;
+      position: relative;
+      padding-left: 16px;
+      padding-right: 32px;
+      line-height: 40px;
+      width: 100%;
+      > span {
+        align-self: flex-end;
+        margin-left: auto;
+        //font-size: 24px;
+        float: right;
+      }
+
+      &:after {
+        position: absolute;
+        font-size: 16px;
+        font-family: 'Glyphicons Halflings', serif;
+        font-weight: @ldir-panel-heading-font-weight;
+        content: "\e114";
+        right: 5px;
+        color: grey;
+      }
+
+      &.collapsed:after {
+        content: "\e080";
+      }
+
+    }
+
+    .accordion-toggle:after {
+      font-family: 'Glyphicons Halflings', serif;
+      content: "\e114";
+      float: right;
+      color: grey;
+    }
+
+    .accordion-toggle.collapsed:after {
+      content: "\e080";
+    }
+  }
+}

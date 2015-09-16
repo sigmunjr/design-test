@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Eksempelside</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/font/roboto/Roboto-Bold.woff2"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/felles-design.css" type="text/css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/ieshiv.css" type="text/css"/>
+    <script type="application/javascript" src="js/ieshiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header>
+    <nav id="top" class="nav navbar-default">
+        <div class="container">
+            <a class="landbruksdirektoratet" aria-label="Landbruksdirektoratet" href="https://www.slf.dep.no/no/#"></a>
+
+            <div class="nav-info pull-right">
+                <ol class="breadcrumb navbar-text pull-right navbar-inverse">
+                    <li>
+                        <a href="#">
+                            <a href="/tjenester"
+                               tabindex="-1">
+                                Elektroniske tjenester</a>
+                        </a>
+                    </li>
+                    <li class="hidden-md hidden-lg">
+                        <a href="/hjelp">Hjelp</a>
+                    </li>
+                    <li>
+                        <a href="/logout">Testbruker: Logg ut</a>
+                    </li>
+                </ol>
+                <a class="fagsystem-title" href="#">Produksjonstilskudd</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="middle" class="nav navbar-default collapse navbar-collapse navbar-collapse">
+        <div class="container">
+            <p class="navbar-text">Fagsystemet</p>
+
+            <p class="navbar-text pull-right">Pålogget: <b>testbruker</b></p>
+        </div>
+    </nav>
+
+    <nav id="lower" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="hidden-lg hidden-md hidden-sm">
+                    <div class="container">
+                        <p class="navbar-text"><strong>Landbruksdirektoratet</strong></p>
+
+                        <p class="navbar-text">Fagsystemet - Pålogget: <b>testbruker</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="#" tabindex="-1">Hovedsiden</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" tabindex="-1">Menypunkt 1</a>
+                    </li>
+                    <li class="active" role="presentation">
+                        <a href="#" tabindex="-1">Menypunkt 2</a>
+                    </li>
+
+                    <li role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nedtrekksmeny</a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="hidden-xs navbar-text pull-right">
+                    <a href="/hjelp">Hjelp</a> | Versjon 1.0
+                </p>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="form-container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Søknad
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li class="active" role="presentation">
+                    <a href="index.html">Administrasjon</a>
+                </li>
+                <li role="presentation">
+                    <a href="index.html">Søknader</a>
+                </li>
+                <li role="presentation">
+                    <a href="index.html">Foretak</a>
+                </li>
+            </ul>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-2">
+                        Status
+                        <p>Under behandling</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        Simulert tilsk
+                        <p>1.000.000</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="btn-toolbar" role="group">
+                            <button type="button" class="btn btn-success">Lagre</button>
+                            <button type="button" class="btn btn-default">Avbryt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Grunnopplysninger</div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="email">Telefon</label>
+
+                                <input onblur="phoneValidation(this);" type="email" class="form-control" id="email" placeholder="Skriv inn telefonnummer">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Etternavn innehaver</label>
+
+                                <p id="pwd">Johansen</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="tlf">Telefon</label>
+
+                                <input type="email" class="form-control" id="tlf" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Ønsker tilbakemelding</label>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-xs-12 col-md-3">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="e-post">Telefon</label>
+
+                                <input type="email" class="form-control" id="e-post" placeholder="E-post adresse">
+                            </div>
+                            <div class="form-group">
+                                <label for="etternavn">Etternavn innehaver</label>
+
+                                <p id="etternavn">Johansen</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobil">Telefon</label>
+
+                                <input type="email" class="form-control" id="mobil"
+                                       placeholder="Skriv inn telefonnummer">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="rememberme">Ønsker tilbakemelding</label>
+
+                                <div id="rememberme" class="control-group">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        Per
+                                        e-post
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        Per
+                                        brev
+                                    </label>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label for="sel1">Søknadstype:</label>
+                            <select class="form-control" id="sel1">
+                                <option>RMP</option>
+                                <option>PT</option>
+                                <option>OBB</option>
+                                <option>FOOBAR</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-3">
+                        <div class="well">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        Tidligere søknader
+
+                                        <span class="glyphicon glyphicon-bookmark pull-right" aria-hidden="true"></span>
+                                    </h4>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <a href="#">PT-H2012</a>
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                            <span class="text-success pull-right">Godkjent</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <a href="#">PT-H2012</a>
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                            <span class="text-success pull-right">Godkjent</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <a href="#">PT-H2012</a>
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                            <span class="text-danger pull-right">Avslått</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <a href="#">PT-H2012</a>
+                                        </div>
+
+                                        <div class="col-xs-6">
+                                            <span class="pull-right">34.405,-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        Dispensasjoner
+
+                                        <span class="glyphicon glyphicon-briefcase pull-right"
+                                              aria-hidden="true"></span>
+                                    </h4>
+
+                                    Ingen dispensasjoner
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Eiendommer
+            </div>
+
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Row</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Carter</td>
+                        <td>johncarter@mail.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Peter</td>
+                        <td>Parker</td>
+                        <td>peterparker@mail.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>John</td>
+                        <td>Rambo</td>
+                        <td>johnrambo@mail.com</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-primary">Legg til eiendom</button>
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Tiltak mot forurensing
+            </div>
+
+
+            <div class="panel-body">
+                <p>Klimaendringer, vekst i folketall, endret arealbruk og urbanisering, og industri- og
+                    landbruksaktiviteter er noen årsaker til forurensing av vann. Store deler av verdens forekomster av
+                    grunnvann og overflatevann er så forurenset at det utgjør en risiko for mennesker og vannlevende
+                    organismer. </p>
+
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                   aria-expanded="true"
+                                   aria-controls="collapseOne">
+                                    Ingen jordbearbeiding, ikke prioritert område
+                                    <span class="">
+                                        Sum: 28
+                                    </span>
+                                </a>
+
+
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <p>
+                                                    <label for="dekar">Søkt om</label>
+                                                    <input id="dekar" type="text" class="form-control"/> dekar
+                                                </p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Row</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John</td>
+                                        <td>Carter</td>
+                                        <td>johncarter@mail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Peter</td>
+                                        <td>Parker</td>
+                                        <td>peterparker@mail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>John</td>
+                                        <td>Rambo</td>
+                                        <td>johnrambo@mail.com</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Kommentar til bruker</p>
+
+                                        <form>
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-group" id="accordion-closed" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-closed" href="#collapseTwo"
+                                   aria-expanded="false"
+                                   aria-controls="collapseTwo">
+                                    Ingen jordbearbeiding, prioritert område
+                            <span class="pull-right">
+                                Sum: 28
+                            </span>
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Row</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John</td>
+                                        <td>Carter</td>
+                                        <td>johncarter@mail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Peter</td>
+                                        <td>Parker</td>
+                                        <td>peterparker@mail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>John</td>
+                                        <td>Rambo</td>
+                                        <td>johnrambo@mail.com</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="btn-toolbar" role="group">
+                            <button type="button" class="btn btn-success">Lagre</button>
+                            <button type="button" class="btn btn-default">Avbryt</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-5">
+                        <div class="btn-toolbar pull-right" role="group">
+                            <button type="button" class="btn btn-danger">Avslå</button>
+                            <button type="button" class="btn btn-warning">Avvis</button>
+                            <button type="button" class="btn btn-primary">Godkjenn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="application/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="application/javascript" src="js/bootstrap.js"></script>
+<script type="application/javascript" src="js/modernizr.js"></script>
+<script type="application/javascript" src="validationTest.js"></script>
+</body>
+</html>

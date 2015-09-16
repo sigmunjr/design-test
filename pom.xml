@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>felles-design</artifactId>
+
+    <parent>
+        <groupId>no.ldir.felles-design</groupId>
+        <artifactId>felles-design-parent</artifactId>
+        <version>0.5.5</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>pl.allegro</groupId>
+                <artifactId>grunt-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <gruntOptions>
+                        <gruntOption>--verbose</gruntOption>
+                    </gruntOptions>
+
+                    <npmEnvironmentVar>
+                        <PHANTOMJS_CDNURL>http://cnpmjs.org/downloads</PHANTOMJS_CDNURL>
+                    </npmEnvironmentVar>
+
+                    <filteredResources>
+                        <filteredResource>maven-properties.json</filteredResource>
+                    </filteredResources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>npm</goal>
+                            <goal>grunt</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.lesscss</groupId>
+                <artifactId>lesscss-maven-plugin</artifactId>
+                <version>1.7.0.1.1</version>
+                <executions>
+                    <execution>
+                        <id>felles-design</id>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/webapp/less</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/classes/META-INF/resources/felles-design/css</outputDirectory>
+                            <compress>true</compress>
+                            <includes>
+                                <include>felles-design.less</include>
+                            </includes>
+                        </configuration>
+
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>bootstrap</id>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/webapp/bootstrap/less</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/classes/META-INF/resources/felles-design/css</outputDirectory>
+                            <compress>true</compress>
+                            <includes>
+                                <include>bootstrap.less</include>
+                            </includes>
+                        </configuration>
+
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

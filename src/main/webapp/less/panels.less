@@ -1,0 +1,81 @@
+@import "variables";
+
+.panel-body {
+  border-left: 1px solid #B3B2B2;
+  border-right: 1px solid #B3B2B2;
+  border:none;
+}
+
+// LDIR logo for første panel
+:not(.panel-group) > div.panel-default {
+  border: 0;
+}
+
+.container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1), .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
+  //background: @ldir-light-gray url("../images/logo.uten.tekst.png") no-repeat right 5px bottom 5px;
+  color: #fff;//@ldir-text-regular-font-color;
+  background: @ldir-panel-heading-first-bg-color url("../images/emblem.png") no-repeat right 5px bottom 5px;
+  //background-size: 80px 50px;
+  background-size: 94.4px 50px;
+}
+
+// Standardstyling for panel
+:not(.panel-group) > div.panel-default > div.panel-heading {
+  color: @ldir-panel-heading-color;
+  border: none;//1px solid @ldir-panel-heading-border-color;
+  font-family: @ldir-panel-heading-font-family;
+  font-size: @ldir-panel-heading-font-size;
+  font-style: @ldir-panel-heading-font-style;
+  line-height: @ldir-panel-heading-line-height;
+  font-weight: @ldir-panel-heading-font-weight;
+  //background-color: @ldir-panel-heading-bg-color;
+  border-radius: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-size: 75px 40px;
+}
+
+// Fjerner top og bunn margin i tråd med designmal
+.panel.panel-default {
+  margin-bottom: 0px;
+  //margin-top: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.form-container {
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.45);
+  margin-bottom: @ldir-form-container-margin;
+
+}
+
+.well-borderless {
+  padding-bottom: 19px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+// Infoboks
+.well {
+  padding: 10px 20px;
+  border: 1px solid #b3b2b2;
+
+  .media-heading {
+    border-bottom: 1px solid #878786;
+    margin-bottom: 12px;
+    padding: 5px 5px 12px;
+
+    font-family: @ldir-panel-heading-font-family;
+    font-size: 14px;
+    font-weight: bold;
+    //font-style: italic;
+
+    .glyphicon {
+      font-size: 16px;
+      top: -2px;
+      color: @ldir-blue;
+    }
+  }
+}
