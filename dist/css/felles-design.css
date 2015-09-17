@@ -44,8 +44,8 @@
 }
 .container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
 .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
-  background: #d9d9d6 url("../images/logo.uten.tekst.png") no-repeat right 5px bottom 5px;
-  color: #3c3c3b;
+  color: #fff;
+  background: #735242 url("../images/emblem.png") no-repeat right 5px bottom 5px;
   background-size: 94.4px 50px;
 }
 :not(.panel-group) > div.panel-default > div.panel-heading {
@@ -106,7 +106,7 @@
   touch-action: manipulation;
   cursor: pointer;
   border: 1px solid transparent;
-  padding: 6px 16px;
+  padding: 10px 16px;
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 4px;
@@ -115,8 +115,8 @@
   -ms-user-select: none;
   user-select: none;
   text-transform: uppercase;
-  background-color: #ded4ce;
-  padding: 8px 8px;
+  background-color: #f5f5f5;
+  padding: 0;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.4s;
@@ -130,20 +130,29 @@
 }
 .panel-group > .panel.panel-default .panel-heading > .panel-title > span {
   margin-right: 10px;
+  line-height: 40px;
 }
-.panel-group > .panel.panel-default .panel-heading a > span.pull-right {
-  font-size: 24px;
+.panel-group > .panel.panel-default .panel-heading a {
+  display: flex;
+  position: relative;
+  padding-left: 16px;
+  padding-right: 32px;
+  line-height: 40px;
+  width: 100%;
+}
+.panel-group > .panel.panel-default .panel-heading a > span {
+  align-self: flex-end;
+  margin-left: auto;
   float: right;
 }
 .panel-group > .panel.panel-default .panel-heading a:after {
-  position: relative;
+  position: absolute;
   font-size: 16px;
   font-family: 'Glyphicons Halflings', serif;
   font-weight: normal;
   content: "\e114";
-  float: right;
+  right: 5px;
   color: grey;
-  top: -2px;
 }
 .panel-group > .panel.panel-default .panel-heading a.collapsed:after {
   content: "\e080";
@@ -179,11 +188,28 @@ nav#top > .container .landbruksdirektoratet {
   background-image: url("../images/logo.med.tekst.svg");
   background-repeat: no-repeat;
 }
+.nav-info {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+.nav-info .breadcrumb {
+  margin-right: 0;
+  font-weight: 300;
+}
+.nav-info .login-info {
+  text-align: right;
+}
+.nav-info .fagsystem-title {
+  font-size: 18px;
+  color: #3c3c3b;
+  text-align: right;
+}
 div.header > div.nav .navbar-text,
 header > nav .navbar-text {
   margin-bottom: 3px;
   margin-top: 5px;
-  font-weight: bold;
+  font-weight: normal;
 }
 .navbar-default .navbar-text > a {
   color: #ffffff;
@@ -196,11 +222,19 @@ header > nav .navbar-text {
   div.header > div.nav#middle,
   header > nav#middle {
     display: none !important;
-    border-bottom: 1px solid #ffffff;
   }
   div.header > div.nav#middle .navbar-text:first-of-type,
   header > nav#middle .navbar-text:first-of-type {
     font-size: 16.5px;
+  }
+  div.header > div.nav#lower,
+  header > nav#lower {
+    background-color: #3a2618;
+    border: none;
+  }
+  div.header > div.nav#lower .container,
+  header > nav#lower .container {
+    background-color: #3a2618;
   }
   div.header > div.nav#lower p.navbar-text.pull-right,
   header > nav#lower p.navbar-text.pull-right {
@@ -215,12 +249,23 @@ header > nav .navbar-text {
     margin-right: 0;
   }
 }
-.navbar-default,
+.navbar-default {
+  background-color: #3a2618;
+}
 .breadcrumb {
   background-color: #ffffff;
 }
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
 .navbar-default .navbar-nav > .active > a {
-  background-color: #e7e7e7;
+  color: #9fdcf2;
+  background-color: #3a2618;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #9fdcf2;
+  background-color: #3a2618;
 }
 div.header > div.nav.navbar-default > .container,
 header > nav.navbar-default > .container {
@@ -232,7 +277,22 @@ nav#lower ul.navbar-nav {
 }
 div.nav#lower ul.navbar-nav li,
 nav#lower ul.navbar-nav li {
-  font-weight: bold;
+  font-weight: normal;
+}
+@media screen and (min-width: 768px) {
+  div.nav#lower ul.navbar-nav > li.active::after,
+  nav#lower ul.navbar-nav > li.active::after,
+  div.nav#lower ul.navbar-nav > li:hover::after,
+  nav#lower ul.navbar-nav > li:hover::after {
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    background-color: #00afd7;
+    content: "";
+    left: 10%;
+    top: -3px;
+  }
 }
 /* Panel tabs */
 .nav.nav-tabs {
@@ -612,6 +672,25 @@ input[type="checkbox"]:disabled:checked:after,
   color: #666666;
   border-color: transparent;
   background-color: transparent;
+}
+input.form-control.haveErrors,
+input.form-control.haveErrors:focus {
+  box-shadow: inset 0 -2px 0 #d22630;
+}
+.error-messages {
+  margin-top: 8px;
+}
+.error-message {
+  color: #d22630;
+  display: flex;
+  align-items: center;
+}
+.error-message::before {
+  content: '\f100';
+  display: inline-block;
+  font-family: "Ionicons";
+  font-size: 20px;
+  margin-right: 5px;
 }
 .btn-toolbar {
   margin-top: 20px;
