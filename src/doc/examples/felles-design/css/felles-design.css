@@ -38,6 +38,7 @@
   border-left: 1px solid #B3B2B2;
   border-right: 1px solid #B3B2B2;
   border: none;
+  box-shadow: none;
 }
 :not(.panel-group) > div.panel-default {
   border: 0;
@@ -284,9 +285,9 @@ header > nav .navbar-text {
   color: #9fdcf2;
   background-color: #3a2618;
 }
-div.header > div.nav.navbar-default > .container > .container,
+div.header > div.nav.navbar-default > .container,
 header > nav.navbar-default > .container,
-div.header > div.nav.navbar-default > .container > .container-fluid,
+div.header > div.nav.navbar-default > .container-fluid,
 header > nav.navbar-default > .container-fluid {
   background-color: #ffffff;
 }
