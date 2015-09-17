@@ -3,7 +3,7 @@
 .panel-body {
   border-left: 1px solid #B3B2B2;
   border-right: 1px solid #B3B2B2;
-  border:none;
+  border: none;
 }
 
 // LDIR logo for første panel
@@ -11,13 +11,15 @@
   border: 0;
 }
 
-.container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1), .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
-  //background: @ldir-light-gray url("../images/logo.uten.tekst.png") no-repeat right 5px bottom 5px;
-  background: @ldir-panel-heading-first-bg-color url("../images/emblem.png") no-repeat right 5px bottom 5px;
-  //background-size: 80px 50px;
-  background-size: 94.4px 50px;
-  &, h1 {
-    color: #fff; //@ldir-text-regular-font-color;
+.container, .container-fluid, .form-container {
+  > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
+    //background: @ldir-light-gray url("../images/logo.uten.tekst.png") no-repeat right 5px bottom 5px;
+    background: @ldir-panel-heading-first-bg-color url("../images/emblem.png") no-repeat right 5px bottom 5px;
+    //background-size: 80px 50px;
+    background-size: 94.4px 50px;
+    &, h1 {
+      color: #fff; //@ldir-text-regular-font-color;
+    }
   }
 }
 
@@ -48,7 +50,7 @@
 }
 
 .form-container {
-  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.45);
   margin-bottom: @ldir-form-container-margin;
 
 }

@@ -43,13 +43,16 @@
   border: 0;
 }
 .container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
+.container-fluid > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
 .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
   background: #735242 url("../images/emblem.png") no-repeat right 5px bottom 5px;
   background-size: 94.4px 50px;
 }
 .container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
+.container-fluid > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
 .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1),
 .container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) h1,
+.container-fluid > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) h1,
 .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) h1 {
   color: #fff;
 }
@@ -181,12 +184,16 @@ nav#top {
   color: #000;
 }
 div.nav#top > .container,
-nav#top > .container {
+nav#top > .container,
+div.nav#top .container-fluid,
+nav#top .container-fluid {
   position: relative;
   height: 80px;
 }
 div.nav#top > .container .landbruksdirektoratet,
-nav#top > .container .landbruksdirektoratet {
+nav#top > .container .landbruksdirektoratet,
+div.nav#top .container-fluid .landbruksdirektoratet,
+nav#top .container-fluid .landbruksdirektoratet {
   position: absolute;
   top: 10px;
   content: "";
@@ -241,7 +248,9 @@ header > nav .navbar-text {
     border: none;
   }
   div.header > div.nav#lower .container,
-  header > nav#lower .container {
+  header > nav#lower .container,
+  div.header > div.nav#lower container-fluid,
+  header > nav#lower container-fluid {
     background-color: #3a2618;
   }
   div.header > div.nav#lower p.navbar-text.pull-right,
@@ -275,8 +284,10 @@ header > nav .navbar-text {
   color: #9fdcf2;
   background-color: #3a2618;
 }
-div.header > div.nav.navbar-default > .container,
-header > nav.navbar-default > .container {
+div.header > div.nav.navbar-default > .container > .container,
+header > nav.navbar-default > .container,
+div.header > div.nav.navbar-default > .container > .container-fluid,
+header > nav.navbar-default > .container-fluid {
   background-color: #ffffff;
 }
 div.nav#lower ul.navbar-nav,
@@ -671,8 +682,8 @@ input[type="checkbox"]:disabled:checked:after,
 .has-success input:not([type=checkbox]):focus,
 .has-success .form-control:focus {
   border-bottom: none;
-  -webkit-box-shadow: inset 0 -2px 0 #00afd7;
-  box-shadow: inset 0 -2px 0 #00afd7;
+  -webkit-box-shadow: inset 0 -2px 0 #6eceb2;
+  box-shadow: inset 0 -2px 0 #6eceb2;
 }
 .has-warning .input-group-addon,
 .has-error .input-group-addon,
@@ -754,16 +765,16 @@ input.form-control.haveErrors:focus {
   background-position: 50%;
 }
 .btn-success:focus {
-  background-color: #00afd7;
+  background-color: #6eceb2;
 }
 .btn-success:hover,
 .btn-success:active:hover {
-  background-color: #0096b8;
+  background-color: #57c6a6;
 }
 .btn-success:active {
-  background-color: #007d9a;
-  background-image: -webkit-radial-gradient(circle, #007d9a 10%, #00afd7 11%);
-  background-image: radial-gradient(circle, #007d9a 10%, #00afd7 11%);
+  background-color: #40be9a;
+  background-image: -webkit-radial-gradient(circle, #40be9a 10%, #6eceb2 11%);
+  background-image: radial-gradient(circle, #40be9a 10%, #6eceb2 11%);
   background-repeat: no-repeat;
   background-size: 1000%;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);

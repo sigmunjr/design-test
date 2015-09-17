@@ -5,7 +5,7 @@ nav#top {
   border-bottom: 3px solid @ldir-brown;
   background: @ldir-navbar-top-background-color;
   color: #000;
-  > .container {
+  > .container, .container-fluid {
     position: relative;
     height: 80px;
     .landbruksdirektoratet {
@@ -80,7 +80,7 @@ header > nav .navbar-text {
       //padding-bottom: 23px;
     }
 
-    .container {
+    .container, container-fluid {
       background-color: @ldir-navbar-top-default-color;
 
     }
@@ -126,10 +126,12 @@ header > nav .navbar-text {
 }
 
 div.header > div.nav.navbar-default > .container,
-header > nav.navbar-default > .container {
+header > nav.navbar-default {
   //padding-top: 4px;
   //padding-bottom: 4px;
-  background-color: @ldir-navbar-top-background-color;
+  > .container, > .container-fluid {
+    background-color: @ldir-navbar-top-background-color;
+  }
 }
 
 div.nav#lower ul.navbar-nav,
