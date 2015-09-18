@@ -57,6 +57,9 @@
 .form-container > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) h1 {
   color: #fff;
 }
+:not(.panel-group) > div.panel-default > div.panel-heading {
+  background-color: #dfdfdf;
+}
 :not(.panel-group) > div.panel-default > div.panel-heading,
 :not(.panel-group) > div.panel-default > div.panel-heading h1,
 :not(.panel-group) > div.panel-default > div.panel-heading h2,
@@ -126,7 +129,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-transform: uppercase;
   background-color: #f5f5f5;
   padding: 0;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -320,7 +322,7 @@ nav#lower ul.navbar-nav li {
 }
 .nav.nav-tabs > li {
   margin-bottom: -2px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 table {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -862,7 +864,7 @@ input.form-control.haveErrors:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn {
-  text-transform: uppercase;
+  text-transform: none;
   border: none;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);

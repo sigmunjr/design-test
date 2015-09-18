@@ -14,9 +14,7 @@
 
 .container, .container-fluid, .form-container {
   > div.panel-default:nth-of-type(1) > div.panel-heading:nth-of-type(1) {
-    //background: @ldir-light-gray url("../images/logo.uten.tekst.png") no-repeat right 5px bottom 5px;
     background: @ldir-panel-heading-first-bg-color url("../images/emblem.png") no-repeat right 5px bottom 5px;
-    //background-size: 80px 50px;
     background-size: 94.4px 50px;
     &, h1 {
       color: #fff; //@ldir-text-regular-font-color;
@@ -26,6 +24,7 @@
 
 // Standardstyling for panel
 :not(.panel-group) > div.panel-default > div.panel-heading {
+  background-color: @ldir-panel-heading-bg-color;
   &, h1, h2, h3 {
     color: @ldir-panel-heading-color;
     border: none; //1px solid @ldir-panel-heading-border-color;
@@ -34,7 +33,6 @@
     font-style: @ldir-panel-heading-font-style;
     line-height: @ldir-panel-heading-line-height;
     font-weight: @ldir-panel-heading-font-weight;
-    //background-color: @ldir-panel-heading-bg-color;
     border-radius: 0 0 0 0;
     margin-bottom: 0;
     margin-top: 0;
